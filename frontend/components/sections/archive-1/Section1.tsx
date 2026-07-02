@@ -48,8 +48,8 @@ export default async function Section1({ searchParams }: Section1Props) {
 
   try {
     const url = categoryId
-      ? `https://api.topheadlinesnews.com/api/news/category/${categoryId}?page=${currentPage}&limit=${itemsPerPage}`
-      : `https://api.topheadlinesnews.com/api/news?page=${currentPage}&limit=${itemsPerPage}`;
+      ? `https://api.politicalangle.in/api/news/category/${categoryId}?page=${currentPage}&limit=${itemsPerPage}`
+      : `https://api.politicalangle.in/api/news?page=${currentPage}&limit=${itemsPerPage}`;
 
     const res = await fetch(url, { cache: "no-store" });
     const data = await res.json();
@@ -69,7 +69,8 @@ export default async function Section1({ searchParams }: Section1Props) {
       : "/assets/imgs/other/img-other-4.png",
 
     description: item.subtitle || "",
-    linkPost: `/single-2?slug=${item.slug}`,
+    // linkPost: `/single-2?slug=${item.slug}`,
+    linkPost: `/news?slug=${item.slug}`,
 
     badge1: item.categories?.[0]?.name || "News",
     badge2: "",

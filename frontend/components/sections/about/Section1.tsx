@@ -8,9 +8,9 @@ export default function Section1() {
         <div className="container">
           <div className="row">
             <div className="col-lg-8 mx-auto text-center">
-              <h2 className="ds-2 mb-0">About Top Headlines News</h2>
+              <h2 className="ds-2 mb-0">About Political Angle</h2>
               <p className="fs-56 m-0">
-                Top Headlines News एक डिजिटल न्यूज़ पोर्टल है जिसका उद्देश्य
+                Political Angle एक डिजिटल न्यूज़ पोर्टल है जिसका उद्देश्य
                 देश-दुनिया की महत्वपूर्ण खबरों को तेज़, सटीक और विश्वसनीय तरीके
                 से पाठकों तक पहुँचाना है। हम अपने पाठकों को राजनीति, राष्ट्रीय
                 समाचार, अंतरराष्ट्रीय घटनाओं, व्यापार, तकनीक, खेल, मनोरंजन और
@@ -41,7 +41,7 @@ export default function Section1() {
           <div className="row g-4 py-4">
             <div className="col-lg-6 pe-lg-5">
               <h5 className="mb-4 font-bold text-2xl">
-                हमारा उद्देश्य – Top Headlines News
+                हमारा उद्देश्य – Political Angle
               </h5>
 
               <ul className="list-disc ps-4 space-y-3 text-gray-700">

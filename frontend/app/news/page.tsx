@@ -16,7 +16,7 @@ export async function generateMetadata({
 
   if (!slug) {
     return {
-      title: "Bharat TV Media",
+      title: "Political Angle",
       description: "Latest News",
     };
   }
