@@ -23,8 +23,8 @@ import toast from 'react-hot-toast'
 import setting from '../../../setting.json'
 import secureLocalStorage from 'react-secure-storage'
 
-import logo from '../../../assets/images/TH_Logo.png'
-import admin from '../../../assets/images/TH_Admin.png'
+import logo from '../../../assets/images/Political_Logo.png'
+import admin from '../../../assets/images/Political_Admin.png'
 
 const schema = yup.object().shape({
   email: yup.string().email().required('Enter your valid email'),
@@ -115,7 +115,7 @@ const Login = () => {
                 <div className="text-center mb-4">
                   <img
                     src={logo}
-                    alt="Top Headlines"
+                    alt="Political Angle Logo"
                     style={{
                       width: '220px',
                       marginBottom: '0px',

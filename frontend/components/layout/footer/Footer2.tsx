@@ -37,7 +37,7 @@ export default function Footer() {
                 <div className="d-flex gap-2">
                   <Link className="dark-mode-invert" href="/">
                     <Image
-                      src="/assets/imgs/template/logo/TH_Logo.png"
+                      src="/assets/imgs/template/logo/Political_Logo.png"
                       width={143}
                       height={150}
                       alt="logo"
@@ -46,7 +46,10 @@ export default function Footer() {
                   {/* <p className="fs-7 m-0">The colors of life.</p> */}
                 </div>
                 <p className="fs-7 text-dark mt-4">
-                 Get the latest updates in politics, business, technology, entertainment, sports, and world affairs. Top Headlines News delivers accurate, timely, and unbiased reporting to keep you informed every day.
+                  Get the latest updates in politics, business, technology,
+                  entertainment, sports, and world affairs. Top Headlines News
+                  delivers accurate, timely, and unbiased reporting to keep you
+                  informed every day.
                 </p>
                 <div className="d-inline-flex group-social-icons">
                   <a

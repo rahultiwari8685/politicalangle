@@ -35,7 +35,7 @@ export default function Header2Server() {
           <Link className="navbar-brand fw-bold fs-3" href="/">
             <Image
               className="dark-mode-invert"
-              src="/assets/imgs/template/logo/TH_Logo.png"
+              src="/assets/imgs/template/logo/Political_Logo.png"
               width={150}
               height={90}
               alt="logo"
