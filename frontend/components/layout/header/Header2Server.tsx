@@ -37,7 +37,7 @@ export default function Header2Server() {
               className="dark-mode-invert"
               src="/assets/imgs/template/logo/Political_Logo.png"
               width={150}
-              height={90}
+              height={80}
               alt="logo"
             />
           </Link>
