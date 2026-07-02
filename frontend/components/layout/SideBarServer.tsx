@@ -73,8 +73,8 @@ export default function SideBarServer() {
           >
             <Image
               src="/assets/imgs/template/logo/Political_Logo.png"
-              width={143}
-              height={18}
+              width={250}
+              height={250}
               alt="logo"
             />
           </Link>
