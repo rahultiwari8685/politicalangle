@@ -124,7 +124,7 @@ export default function Section3Interactive() {
     .slice(0, 10)
 
     .map((item: any, idx: number) => ({
-      linkPost: `/single-2?slug=${item.slug}`,
+      linkPost: `/news?slug=${item.slug}`,
 
       // img: item.thumbnail
       //   ? `${setting.api}/uploads/images/${item.thumbnail}`
@@ -160,7 +160,6 @@ export default function Section3Interactive() {
 
   return (
     <div className="row">
-      
       <div className="col-lg-3">
         <ul className="nav nav-tabs d-flex flex-lg-column flex-row flex-wrap ps-0 ps-lg-5">
           {categories.slice(0, 10).map((tab) => (
