@@ -23,7 +23,8 @@ export default function Section1() {
 
     setLoading(true);
 
-    fetch(`${setting.api}/api/news/slug/${slug}`)
+    // fetch(`${setting.api}/api/news/slug/${slug}`)
+    fetch(`https://api.politicalangle.in/api/news/slug/${slug}`)
       .then((res) => res.json())
       .then((res) => {
         if (res.status) {
