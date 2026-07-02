@@ -41,7 +41,7 @@ export default function SideBarServer() {
             // ? `${setting.api}/uploads/images/${item.thumbnail}`
             // : "/assets/imgs/other/img-other-4.png",
 
-            link: `/single-2?slug=${item.slug}`,
+            link: `/news?slug=${item.slug}`,
 
             title: item.title || "No Title",
 
@@ -72,7 +72,7 @@ export default function SideBarServer() {
             className="sidebar-brand fw-bold fs-3 dark-mode-invert"
           >
             <Image
-              src="/assets/imgs/template/logo/top-dark.png"
+              src="/assets/imgs/template/logo/Political_Logo.png"
               width={143}
               height={18}
               alt="logo"
