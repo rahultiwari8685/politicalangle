@@ -21,20 +21,20 @@ const geist = Geist({
 // };
 
 export const metadata: Metadata = {
-  title: "Top Headlines News",
-  description: "Top Headlines News",
+  title: "Political Angle",
+  description: "Political Angle",
 
   openGraph: {
-    title: "Top Headlines News",
-    description: "Top Headlines News",
-    url: "https://topheadlinesnews.com",
-    siteName: "Top Headlines News",
+    title: "Political Angle",
+    description: "Political Angle",
+    url: "https://politicalangle.in",
+    siteName: "Political Angle",
     images: [
       {
-        url: "https://topheadlinesnews.com/assets/imgs/template/logo/TH_Logo.png",
+        url: "https://politicalangle.in/assets/imgs/template/logo/Political_Logo.png",
         width: 1200,
         height: 630,
-        alt: "Top Headlines News",
+        alt: "Political Angle",
       },
     ],
     locale: "en_US",
@@ -43,10 +43,10 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Top Headlines News",
-    description: "Top Headlines News",
+    title: "Political Angle",
+    description: "Political Angle",
     images: [
-      "https://topheadlinesnews.com/assets/imgs/template/logo/TH_Logo.png",
+      "https://politicalangle.in/assets/imgs/template/logo/Political_Logo.png",
     ],
   },
 };
