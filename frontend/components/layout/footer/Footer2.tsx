@@ -46,10 +46,11 @@ export default function Footer() {
                   {/* <p className="fs-7 m-0">The colors of life.</p> */}
                 </div>
                 <p className="fs-7 text-dark mt-4">
-                  Get the latest updates in politics, business, technology,
-                  entertainment, sports, and world affairs. Top Headlines News
-                  delivers accurate, timely, and unbiased reporting to keep you
-                  informed every day.
+                  Political Angle is your trusted destination for factual
+                  journalism and meaningful analysis. We cover politics, current
+                  affairs, economy, technology, and global events with accuracy,
+                  integrity, and transparency—bringing you every perspective
+                  that matters.
                 </p>
                 <div className="d-inline-flex group-social-icons">
                   <a

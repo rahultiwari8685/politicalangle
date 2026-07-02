@@ -21,7 +21,7 @@ export default function Section5() {
             (item: any) => !item.youtubeUrl && item.type === 1,
           );
           const formattedData = textNews
-            .slice(0, 5)
+            .slice(0, 8)
             .map((item: any, idx: number) => ({
               linkPost: `/single-2?slug=${item.slug}`,
               linkBadge: "#",
