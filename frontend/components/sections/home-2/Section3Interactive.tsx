@@ -40,7 +40,7 @@ export default function Section3Interactive() {
   useEffect(() => {
     setLoading(true);
 
-    fetch(setting.api + "/api/news/getAllTextNews")
+    fetch(`${setting.api}/api/news/getAllTextNews?limit=70`)
       .then((res) => res.json())
       .then((u) => {
         if (u.status !== false) {
