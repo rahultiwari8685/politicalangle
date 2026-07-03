@@ -88,13 +88,96 @@ export const createNews = async (req, res) => {
 
 export const getNews = async (req, res) => {
   try {
-    const news = await News.find()
+    const { page = 1, limit = 10 } = req.query;
+
+    const skip = (Number(page) - 1) * Number(limit);
+
+    const news = await News.find({ type: 1 }) // Only published news (optional)
       .populate("author", "name email")
       .populate("categories", "name")
-      .sort({ createdAt: -1 });
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(Number(limit));
+
+    const total = await News.countDocuments({ type: 1 });
 
     return res.status(200).json({
       status: true,
+      total,
+      totalPages: Math.ceil(total / Number(limit)),
+      currentPage: Number(page),
+      data: news,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      status: false,
+      message: error.message,
+    });
+  }
+};
+
+export const getTextNews = async (req, res) => {
+  try {
+    const { page = 1, limit = 10 } = req.query;
+
+    const skip = (Number(page) - 1) * Number(limit);
+
+    const news = await News.find({
+      type: 1, // Published
+      videoType: 2, // Text News
+    })
+      .populate("author", "name email")
+      .populate("categories", "name slug")
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(Number(limit));
+
+    const total = await News.countDocuments({
+      type: 1,
+      videoType: 2,
+    });
+
+    return res.status(200).json({
+      status: true,
+      total,
+      totalPages: Math.ceil(total / Number(limit)),
+      currentPage: Number(page),
+      data: news,
+    });
+  } catch (error) {
+    return res.status(500).json({
+      status: false,
+      message: error.message,
+    });
+  }
+};
+
+export const getVideoNews = async (req, res) => {
+  try {
+    const { page = 1, limit = 10 } = req.query;
+
+    const skip = (Number(page) - 1) * Number(limit);
+
+    const news = await News.find({
+      type: 1, // Published
+      videoType: 1, // Video News
+    })
+      .populate("author", "name email")
+      .populate("categories", "name slug")
+      .sort({ createdAt: -1 })
+      .skip(skip)
+      .limit(Number(limit));
+
+    const total = await News.countDocuments({
+      type: 1,
+      videoType: 1,
+    });
+
+    return res.status(200).json({
+      status: true,
+      total,
+      totalPages: Math.ceil(total / Number(limit)),
+      currentPage: Number(page),
       data: news,
     });
   } catch (error) {

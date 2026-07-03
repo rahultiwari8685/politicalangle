@@ -14,6 +14,8 @@ import {
   autoSaveNews,
   getAllNewsForSitemap,
   getCategorySitemap,
+  getTextNews,
+  getVideoNews,
 } from "../controllers/newsController.js";
 
 const router = express.Router();
@@ -23,6 +25,8 @@ router.post("/saveNews", upload.single("thumbnail"), createNews);
 router.post("/updateNews", upload.single("thumbnail"), updateNews);
 
 router.get("/getAllNews", getNews);
+router.get("/getAllTextNews", getTextNews);
+router.get("/getAllVideoNews", getVideoNews);
 // router.get("/news/category/:categoryId", getAllNewsByCategory);
 router.get("/category/:categoryId", getAllNewsByCategory);
 // router.get("/:slug", getNewsBySlug);

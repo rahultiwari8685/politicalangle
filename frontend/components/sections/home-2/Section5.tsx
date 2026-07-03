@@ -13,13 +13,11 @@ export default function Section5() {
   useEffect(() => {
     setLoading(true);
 
-    fetch(setting.api + "/api/news/getAllNews")
+    fetch(`${setting.api}/api/news/getAllTextNews?limit=7`)
       .then((res) => res.json())
       .then((u) => {
         if (u.status !== false) {
-          const textNews = u.data.filter(
-            (item: any) => !item.youtubeUrl && item.type === 1,
-          );
+          const textNews = u.data;
           const formattedData = textNews
             .slice(0, 8)
             .map((item: any, idx: number) => ({
