@@ -18,28 +18,19 @@ export default function SideBarServer() {
   useEffect(() => {
     setLoading(true);
 
-    fetch(setting.api + "/api/news/getAllNews")
+    fetch(`${setting.api}/api/news/getAllTextNews?limit=10`)
       .then((res) => res.json())
       .then((u) => {
         if (u.status !== false) {
-          // ✅ FILTER TEXT NEWS
-          const textNews = u.data.filter((item: any) => !item.youtubeUrl);
+          const textNews = u.data;
 
-          // ✅ DYNAMIC POPULAR POSTS
           const formattedSidebar = textNews.slice(0, 4).map((item: any) => ({
             fontSize: "fs-7",
 
             style: "style-2",
-
-            // img: item.thumbnail || "/assets/imgs/other/img-other-4.png",
             img: item.thumbnail
               ? `${setting.api}/uploads/images/${item.thumbnail}`
               : "/assets/imgs/other/img-other-4.png",
-
-            // If uploads folder image use this:
-            // img: item.thumbnail
-            // ? `${setting.api}/uploads/images/${item.thumbnail}`
-            // : "/assets/imgs/other/img-other-4.png",
 
             link: `/news?slug=${item.slug}`,
 

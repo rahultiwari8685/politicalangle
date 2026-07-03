@@ -67,7 +67,7 @@ export default function Section5() {
         <div className="row">
           <div className="col-12">
             <SectionTitle
-              title="Latest Text News"
+              title="Latest News"
               description="Breaking stories, in-depth reports, and the latest updates."
             />
           </div>
