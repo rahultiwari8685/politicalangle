@@ -28,11 +28,11 @@ export default function Single_2() {
   useEffect(() => {
     setLoading(true);
 
-    fetch(setting.api + "/api/news/getAllNews")
+    fetch(`${setting.api}/api/news/getAllTextNews?limit=4`)
       .then((res) => res.json())
       .then((u) => {
         if (u.status !== false) {
-          const textNews = u.data.filter((item: any) => !item.youtubeUrl);
+          const textNews = u.data;
 
           const formattedData: RelatedArticleType[] = textNews
             .slice(0, 4)
@@ -47,7 +47,7 @@ export default function Single_2() {
 
               linkBadge: "#",
 
-              linkPost: `/single-2?slug=${item.slug}`,
+              linkPost: `/news?slug=${item.slug}`,
               linkAuthor: `/page-author/${item.author?._id}`,
 
               badge: item.categories?.[0]?.name || "News",

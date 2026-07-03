@@ -40,9 +40,9 @@ export async function generateMetadata({
       ? news.thumbnail.startsWith("http")
         ? news.thumbnail
         : `${setting.api}/uploads/images/${news.thumbnail}`
-      : "https://bharattvmedia.com/assets/imgs/template/logo/Bharat_Logo.png";
+      : "https://politicalangle.in/assets/imgs/template/logo/Political_Logo.png";
 
-    const url = `https://bharattvmedia.com/single-2?slug=${slug}`;
+    const url = `https://politicalangle.in/news?slug=${slug}`;
 
     return {
       title: news.title,
@@ -52,7 +52,7 @@ export async function generateMetadata({
         title: news.title,
         description: news.subtitle,
         url,
-        siteName: "Bharat TV Media",
+        siteName: "Political Angle",
         type: "article",
         images: [
           {
@@ -73,7 +73,7 @@ export async function generateMetadata({
     };
   } catch (error) {
     return {
-      title: "Bharat TV Media",
+      title: "Political Angle",
       description: "Latest News",
     };
   }
