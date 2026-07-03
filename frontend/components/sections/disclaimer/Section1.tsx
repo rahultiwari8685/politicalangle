@@ -25,7 +25,7 @@ export default function Section1() {
             <h2 className="mb-2 text-2xl font-semibold">बाहरी वेबसाइट लिंक</h2>
 
             <p>
-              वेबसाइट पर दिए गए बाहरी लिंक की सामग्री के लिए Top Headlines News
+              वेबसाइट पर दिए गए बाहरी लिंक की सामग्री के लिए Political Angle
               जिम्मेदार नहीं होगा।
             </p>
           </div>

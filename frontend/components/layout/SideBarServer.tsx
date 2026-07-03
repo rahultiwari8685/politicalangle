@@ -198,8 +198,7 @@ export default function SideBarServer() {
 
         <div className="text-center">
           <p className="fs-7">
-            2026 Copyright @{" "}
-            <span className="text-dark">Top Headlines News.</span>{" "}
+            2026 Copyright @ <span className="text-dark">Political Angle.</span>{" "}
             <br className="d-none d-lg-block" />
             <span> All Rights Reserved </span>
           </p>

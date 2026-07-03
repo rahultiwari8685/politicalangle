@@ -15,11 +15,6 @@ const geist = Geist({
   display: "swap",
 });
 
-// export const metadata: Metadata = {
-//   title: "Top Headlines News",
-//   description: "Top Headlines News",
-// };
-
 export const metadata: Metadata = {
   title: "Political Angle",
   description: "Political Angle",

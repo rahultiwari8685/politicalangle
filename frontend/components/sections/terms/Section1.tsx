@@ -5,7 +5,7 @@ export default function Section1() {
         <h1 className="mb-6 text-4xl font-bold">नियम और शर्तें</h1>
 
         <p className="mb-6 leading-relaxed text-gray-700">
-          Top Headlines News वेबसाइट का उपयोग करने पर आप नीचे दी गई शर्तों और
+          Political Angle वेबसाइट का उपयोग करने पर आप नीचे दी गई शर्तों और
           नियमों से सहमत होते हैं।
         </p>
 
@@ -15,7 +15,7 @@ export default function Section1() {
 
             <p>
               इस वेबसाइट पर प्रकाशित सभी समाचार, लेख, फोटो, वीडियो और ग्राफिक्स
-              Top Headlines News की संपत्ति हैं। बिना अनुमति सामग्री की कॉपी या
+              Political Angle की संपत्ति हैं। बिना अनुमति सामग्री की कॉपी या
               पुनः प्रकाशित करना प्रतिबंधित है।
             </p>
           </div>
@@ -44,7 +44,7 @@ export default function Section1() {
             <h2 className="mb-2 text-2xl font-semibold">4. बाहरी लिंक</h2>
 
             <p>
-              वेबसाइट पर मौजूद बाहरी लिंक की सामग्री के लिए Top Headlines News
+              वेबसाइट पर मौजूद बाहरी लिंक की सामग्री के लिए Political Angle
               जिम्मेदार नहीं होगा।
             </p>
           </div>
@@ -53,7 +53,7 @@ export default function Section1() {
             <h2 className="mb-2 text-2xl font-semibold">5. नियमों में बदलाव</h2>
 
             <p>
-              Top Headlines News किसी भी समय नियम और शर्तों में बदलाव करने का
+              Political Angle किसी भी समय नियम और शर्तों में बदलाव करने का
               अधिकार रखता है।
             </p>
           </div>
