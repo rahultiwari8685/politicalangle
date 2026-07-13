@@ -36,13 +36,21 @@ export async function generateMetadata({
       };
     }
 
-    const image = news.thumbnail
-      ? news.thumbnail.startsWith("http")
-        ? news.thumbnail
-        : `${setting.api}/uploads/images/${news.thumbnail}`
-      : "https://politicalangle.in/assets/imgs/template/logo/Political_Logo.png";
+    // const image = news.thumbnail
+    //   ? news.thumbnail.startsWith("http")
+    //     ? news.thumbnail
+    //     : `${setting.api}/uploads/images/${news.thumbnail}`
+    //   : "https://politicalangle.in/assets/imgs/template/logo/Political_Logo.png";
 
-    const url = `https://politicalangle.in/news?slug=${slug}`;
+  
+
+      const image = news.thumbnail
+    ? news.thumbnail.startsWith("http")
+      ? news.thumbnail
+      : `${setting.api}/uploads/images/${news.thumbnail}`
+    : `${setting.site}/assets/imgs/template/logo/Political_Logo.png`;
+
+  const url = `https://politicalangle.in/news?slug=${slug}`;
 
     return {
       title: news.title,
