@@ -65,7 +65,7 @@ export default function Section1() {
       data-background="/assets/imgs/page/bg-home1-sec1.png"
     >
       {/* <div className="container d-none d-md-block">
-        <div className="row mb-1">
+        <div className="row ">
           <div className="col-12">
             <div className="text-center">
               <h1 className="ds-2 lh-0 mb-0 text-anime-style-2">

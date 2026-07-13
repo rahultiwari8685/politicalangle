@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -177,19 +177,30 @@ export default function Section1() {
 
           <div className="col-lg-6 mt-2 mt-lg-0">
             {news.thumbnail ? (
-              <img
-                src={
-                  news.thumbnail?.startsWith("http")
-                    ? news.thumbnail
-                    : `${setting.api}/uploads/images/${news.thumbnail}`
-                }
-                className="img-fluid"
-                alt="news"
+              <div
                 style={{
+                  position: "relative",
                   width: "100%",
+                  height: "300px",
+                  overflow: "hidden",
                   borderRadius: "10px",
                 }}
-              />
+              >
+                <Image
+                  src={
+                    news.thumbnail?.startsWith("http")
+                      ? news.thumbnail
+                      : `${setting.api}/uploads/images/${news.thumbnail}`
+                  }
+                  alt={news.title}
+                  fill
+                  quality={90}
+                  sizes="100vw"
+                  style={{
+                    objectFit: "cover",
+                  }}
+                />
+              </div>
             ) : videoId ? (
               <div
                 style={{
