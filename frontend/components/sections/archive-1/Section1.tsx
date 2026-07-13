@@ -6,7 +6,6 @@ interface Section1Props {
   searchParams?: Promise<{ page?: string; category?: string }>;
 }
 
-// ✅ API News Type
 type NewsItem = {
   _id: string;
   title: string;
@@ -14,7 +13,12 @@ type NewsItem = {
   slug: string;
   thumbnail: string;
   videoType?: string;
-  categories?: { _id: string; name: string }[];
+
+  categories?: {
+    _id: string;
+    name: string;
+    slug: string; // <-- Add this
+  }[];
 };
 
 // ✅ Full Card Type (MATCH ArticleCard7)
@@ -64,13 +68,17 @@ export default async function Section1({ searchParams }: Section1Props) {
 
   const cards: CardType[] = news.map((item) => ({
     title: item.title,
+
     img: item.thumbnail
-      ? `${setting.api}/uploads/images/${item.thumbnail}`
+      ? item.thumbnail.startsWith("http")
+        ? item.thumbnail
+        : `${setting.api}/uploads/images/${item.thumbnail}`
       : "/assets/imgs/other/img-other-4.png",
 
     description: item.subtitle || "",
-    // linkPost: `/single-2?slug=${item.slug}`,
-    linkPost: `/${item.categories?.[0]?.slug || item.categories?.[0]?._id}/${item.slug}`,
+
+    // SEO URL
+    linkPost: `/${item.categories?.[0]?.slug || "news"}/${item.slug}`,
 
     badge1: item.categories?.[0]?.name || "News",
     badge2: "",
@@ -83,9 +91,7 @@ export default async function Section1({ searchParams }: Section1Props) {
     linkVideo: "#",
     layoutVideo: "d-none",
 
-    linkBadge: item.categories?.[0]?._id
-      ? `/archive-1?category=${item.categories[0]._id}`
-      : "#",
+    linkBadge: item.categories?.[0]?.slug ? `/${item.categories[0].slug}` : "#",
   }));
 
   const ServerPagination = () => {
