@@ -88,7 +88,7 @@ export default function Section10() {
   if (loading) return null;
 
   return (
-    <section className="sec-10-home-1 sec-padding">
+    <section className="sec-10-home-1">
       <div className="container">
         <div className="row">
           <div className="col-12">

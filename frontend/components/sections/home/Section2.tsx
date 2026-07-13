@@ -36,7 +36,7 @@ export default function Section2() {
           {categories.map((category: any) => (
             <div className="carouselTicker__item mx-3" key={category._id}>
               <Link
-                href={`/category/${category.slug || category._id}`}
+                href={`/archive-1?category=${category._id}`}
                 className="tag-item"
               >
                 <span>{category.name}</span>
