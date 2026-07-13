@@ -4218,7 +4218,7 @@ strong {
 }
 
 .sec-1-home-1 {
-    padding-top: 100px;
+    padding-top: 10px;
     padding-bottom: 70px;
     background-position: top center;
     background-repeat: no-repeat;
@@ -5324,8 +5324,8 @@ strong {
     }
 
     .sec-1-home-1 {
-        padding-top: 60px;
-        padding-bottom: 40px;
+        padding-top: 10px;
+        padding-bottom: 10px;
         background-position: top center;
         background-repeat: no-repeat;
     }
