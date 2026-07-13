@@ -9,11 +9,16 @@ export default function Section2() {
   const [categories, setCategories] = useState<any[]>([]);
 
   useEffect(() => {
-    fetch(`${setting.api}/api/category/getAllCategory`)
+    fetch(`${setting.api}/api/categories/getAllCategory`)
       .then((res) => res.json())
       .then((res) => {
-        if (res.status) {
-          setCategories(res.data || []);
+        if (res.success) {
+          // Show only top-level categories
+          const data = res.data.filter(
+            (item: any) => item.parentCategory === null,
+          );
+
+          setCategories(data);
         }
       })
       .catch((err) => console.error(err));
@@ -28,11 +33,13 @@ export default function Section2() {
           pauseOnHover
           className="carouselTicker__list"
         >
-          {categories.map((category) => (
+          {categories.map((category: any) => (
             <div className="carouselTicker__item mx-3" key={category._id}>
-              <Link href={`/category/${category.slug}`} className="tag-item">
+              <Link
+                href={`/category/${category.slug || category._id}`}
+                className="tag-item"
+              >
                 <span>{category.name}</span>
-                <span className="number">{category.newsCount ?? 0}</span>
               </Link>
             </div>
           ))}
