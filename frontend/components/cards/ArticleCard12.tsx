@@ -28,13 +28,18 @@ export default function ArticleCard12({ card, idx }: CardProps) {
         className="article card-12 d-flex flex-md-row align-items-stretch flex-column"
         key={idx}
       >
-        <Link href={card.linkPost} className="card-img-top position-relative">
-          <img
+        <Link
+          href={card.linkPost}
+          className="card-img-top position-relative overflow-hidden"
+          style={{ width: "100%", height: "280px" }}
+        >
+          <Image
             src={card.img}
-            alt="magzin"
-            className="cover-image thumbnail cover-image"
-            width={500}
-            height={500}
+            alt={card.title}
+            fill
+            className="object-fit-cover"
+            sizes="(max-width: 768px) 100vw, 50vw"
+            quality={85}
           />
         </Link>
         <div className="card-body">
@@ -83,12 +88,12 @@ export default function ArticleCard12({ card, idx }: CardProps) {
                 href={card.linkAuthor}
                 className="author d-flex align-items-center gap-2"
               >
-                <img
+                <Image
                   className="avatar avatar-md rounded-circle"
                   src={card.imgAuthor}
-                  alt="magzin"
-                  width={500}
-                  height={500}
+                  alt={card.author}
+                  width={40}
+                  height={40}
                 />
                 <span className="fs-7 text-dark fw-regular">{card.author}</span>
               </Link>

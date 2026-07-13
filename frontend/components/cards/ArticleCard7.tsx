@@ -102,18 +102,29 @@ export default function ArticleCard7({ card, idx }: CardProps) {
             </Link>
 
             {/* ✅ IMAGE / VIDEO */}
-            <div className="position-relative card-img">
+            <div
+              className="position-relative card-img rounded-16 overflow-hidden"
+              style={{
+                width: "100%",
+                height: "206px",
+                overflow: "hidden",
+              }}
+            >
               <Link href={card.linkPost}>
-                <img
-                  className="rounded-16 overflow-hidden cover-image"
+                <Image
                   src={card.img}
                   alt={card.title}
-                  width={310}
-                  height={206}
+                  fill
+                  priority={idx < 2}
+                  quality={85}
+                  sizes="(max-width:768px) 100vw, 310px"
+                  style={{
+                    objectFit: "cover",
+                    borderRadius: "16px",
+                  }}
                 />
               </Link>
 
-              {/* ✅ VIDEO BUTTON SHOW ONLY IF VIDEO EXISTS */}
               {card.linkVideo && (
                 <Link
                   href={card.linkVideo}
