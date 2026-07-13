@@ -28,7 +28,7 @@ export default function ArticleCard1({ card, idx }: CardProps) {
           href={card.linkPost}
           className="card-img-top d-block overflow-hidden"
           style={{
-            height: "400px",
+            height: "250px",
             position: "relative",
           }}
         >
