@@ -73,14 +73,7 @@ export default function ArticleCard1({ card, idx }: CardProps) {
             <div className="curve-one"></div>
             <div className="curve-two"></div>
           </div>
-          <div
-            className="left"
-            style={{
-              flex: 1,
-              width: "100%",
-              minWidth: 0,
-            }}
-          >
+          <div className="left">
             <div className="card-info gap-2 d-flex flex-wrap align-items-center mb-3">
               <Link
                 href={card.linkBadge}
@@ -98,9 +91,27 @@ export default function ArticleCard1({ card, idx }: CardProps) {
               </ul>
             </div>
             <Link href={card.linkPost}>
-              <h4 className="card-title mb-0 ">{card.title}</h4>
+              <h4
+                className="card-title mb-0"
+                style={{
+                  whiteSpace: "normal",
+                  wordBreak: "break-word",
+                  width: "100%",
+                }}
+              >
+                {card.title}
+              </h4>
             </Link>
-            <p className="card-text text-600 fs-7 mb-0">{card.description}</p>
+            <p
+              className="card-text text-600 fs-7 mb-0"
+              style={{
+                whiteSpace: "normal",
+                wordBreak: "break-word",
+                width: "100%",
+              }}
+            >
+              {card.description}
+            </p>
           </div>
           <div className="right">
             <Link href="#" className="book-mark">
