@@ -1,14 +1,16 @@
 "use client";
+
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
-import { useEffect, useState } from "react";
 import setting from "../../../setting.json";
 
-export default function Section1() {
-  const searchParams = useSearchParams();
-  const slug = searchParams.get("slug");
+type Props = {
+  slug: string;
+  category: string;
+};
 
+export default function Section1({ slug, category }: Props) {
   const [news, setNews] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 
@@ -19,10 +21,9 @@ export default function Section1() {
   };
 
   useEffect(() => {
-    if (!slug) return;
-
     setLoading(true);
-    fetch(`https://api.politicalangle.in/api/news/slug/${slug}`)
+
+    fetch(`${setting.api}/api/news/slug/${slug}`)
       .then((res) => res.json())
       .then((res) => {
         if (res.status) {
@@ -30,10 +31,6 @@ export default function Section1() {
         } else {
           setNews(null);
         }
-      })
-      .catch((err) => {
-        console.error("API Error:", err);
-        setNews(null);
       })
       .finally(() => setLoading(false));
   }, [slug]);
@@ -48,7 +45,7 @@ export default function Section1() {
 
   const videoId = getYouTubeId(news.youtubeUrl);
 
-  const currentUrl = typeof window !== "undefined" ? window.location.href : "";
+  const currentUrl = `${setting.site}/${category}/${slug}`;
 
   return (
     <section className="sec-1-single-2 pb-70 overflow-hidden mt-10">

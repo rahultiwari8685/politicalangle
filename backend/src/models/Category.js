@@ -18,6 +18,11 @@ const categorySchema = new mongoose.Schema(
       type: String,
       default: "0",
     },
+    slug: {
+      type: String,
+      unique: true,
+      index: true,
+    },
     position: {
       type: Number,
       default: 0,
