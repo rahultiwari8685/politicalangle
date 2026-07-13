@@ -24,18 +24,24 @@ export default function ArticleCard1({ card, idx }: CardProps) {
   return (
     <>
       <div className="article card-1" key={idx}>
-        <Link href="#" className="card-img-top">
+        <Link
+          href={card.linkPost}
+          className="card-img-top d-block overflow-hidden"
+          style={{
+            height: "400px",
+            position: "relative",
+          }}
+        >
           <Image
             src={card.img}
-            className="w-100 h-100"
-            width={600}
-            height={400}
-            alt="magzin"
-            priority={true}
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-            placeholder="blur"
-            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
+            alt={card.title}
+            fill
+            className="object-fit-cover"
+            sizes="(max-width:768px) 100vw, (max-width:1200px) 50vw, 33vw"
+            priority
             quality={85}
+            placeholder="blur"
+            blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD..."
           />
         </Link>
         <div className="card-body">
