@@ -70,7 +70,7 @@ export default async function Section1({ searchParams }: Section1Props) {
 
     description: item.subtitle || "",
     // linkPost: `/single-2?slug=${item.slug}`,
-    linkPost: `/news?slug=${item.slug}`,
+    linkPost: `/${item.categories?.[0]?.slug || item.categories?.[0]?._id}/${item.slug}`,
 
     badge1: item.categories?.[0]?.name || "News",
     badge2: "",

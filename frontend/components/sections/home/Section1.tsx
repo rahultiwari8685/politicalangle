@@ -25,7 +25,7 @@ export default function Section1() {
               : "/assets/imgs/page/img-66.png",
 
             linkBadge: "#",
-            linkPost: `/news?slug=${item.slug}`,
+            linkPost: `/${item.categories?.[0]?.slug || item.categories?.[0]?._id}/${item.slug}`,
             linkComment: "#",
             linkRead: "#",
 

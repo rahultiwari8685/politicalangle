@@ -21,7 +21,7 @@ export default function Section5() {
           const formattedData = textNews
             .slice(0, 8)
             .map((item: any, idx: number) => ({
-              linkPost: `/news?slug=${item.slug}`,
+              linkPost: `/${item.categories?.[0]?.slug || item.categories?.[0]?._id}/${item.slug}`,
               linkBadge: "#",
               linkAuthor: `/page-author/${item.author?._id}`,
               linkComment: "#",

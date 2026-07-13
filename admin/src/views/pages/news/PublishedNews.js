@@ -278,7 +278,11 @@ const PublishedNews = () => {
                       <CTableDataCell>{actualIndex + 1}</CTableDataCell>
                       <CTableDataCell>
                         <a
-                          href={`https://politicalangle.in/news?slug=${news.slug}`}
+                          href={`https://politicalangle.in/${
+                            news.categories?.[0]?.slug ||
+                            news.categories?.[0]?.name?.toLowerCase().replace(/\s+/g, '-') ||
+                            'news'
+                          }/${news.slug}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           style={{

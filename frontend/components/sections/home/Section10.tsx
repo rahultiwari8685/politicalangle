@@ -35,7 +35,7 @@ export default function Section10() {
             return {
               slug: item.slug,
 
-              linkPost: `/news?slug=${item.slug}`,
+              linkPost: `/${item.categories?.[0]?.slug || item.categories?.[0]?._id}/${item.slug}`,
               linkBadge: "#",
               linkAuthor: `/page-author/${item.author?._id}`,
               linkComment: "#",

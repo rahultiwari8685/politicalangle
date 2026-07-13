@@ -121,7 +121,7 @@ export default function Section3Interactive() {
     .slice(0, 10)
 
     .map((item: any, idx: number) => ({
-      linkPost: `/news?slug=${item.slug}`,
+      linkPost: `/${item.categories?.[0]?.slug || item.categories?.[0]?._id}/${item.slug}`,
 
       img: item.thumbnail
         ? item.thumbnail.startsWith("http")
