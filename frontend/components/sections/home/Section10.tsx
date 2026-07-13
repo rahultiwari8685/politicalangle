@@ -72,7 +72,7 @@ export default function Section10() {
             };
           });
 
-          setFeaturedNews(formatted.slice(0, 2));
+          setFeaturedNews(formatted.slice(0, 1));
           setLatestNews(formatted.slice(2, 6));
         }
       } catch (err) {
