@@ -4,8 +4,13 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "topheadlinesnews.com",
+        hostname: "politicalangle.in",
         pathname: "/wp-content/uploads/**",
+      },
+      {
+        protocol: "https",
+        hostname: "api.politicalangle.in",
+        pathname: "/uploads/**",
       },
 
       {
