@@ -12,16 +12,18 @@ export default function Section1() {
         className="sec-1-home-1"
         data-background="/assets/imgs/page/bg-home1-sec1.png"
       >
-        {/* <div className="container d-none d-md-block">
-                    <div className="row mb-5">
-                        <div className="col-12">
-                            <div className="text-center">
-                                <h1 className="ds-2 lh-0 mb-0 text-anime-style-2">Your Gateway to Global News</h1>
-                                <p className="fs-5 mt-0 text-anime-style-2">Breaking Stories from Every Corner of the Globe</p>
-                            </div>
-                        </div>
-                    </div>
-                </div> */}
+        <div className="container d-none d-md-block">
+          <div className="row mb-1">
+            <div className="col-12">
+              <div className="text-center">
+                <h1 className="ds-2 lh-0 mb-0 text-anime-style-2">
+                  Your Gateway to Global News
+                </h1>
+                {/* <p className="fs-5 mt-0 text-anime-style-2">Breaking Stories from Every Corner of the Globe</p> */}
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="container-fluid">
           <SwiperDynamic
             className="swiper swiper-card-hero py-2"

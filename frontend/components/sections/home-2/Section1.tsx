@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import ArticleCard5 from "@/components/cards/ArticleCard5";
 import ArticleCard11 from "@/components/cards/ArticleCard11";
 import setting from "../../../setting.json";
-
+import SectionTitle from "@/components/elements/TitleWhite";
 export default function Section1({ classList }: any) {
   const [textNews, setTextNews] = useState<any[]>([]);
   const [videoNews, setVideoNews] = useState<any[]>([]);
@@ -93,6 +93,16 @@ export default function Section1({ classList }: any) {
       className={`sec-1-home-2  ${classList}`}
       data-background="/assets/imgs/page/bg-home1-sec1.png"
     >
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <SectionTitle
+              title="Breaking News"
+              description="Real-Time Updates That Matter"
+            />
+          </div>
+        </div>
+      </div>
       <div className="container">
         <div className="row mt-2 g-4">
           {/* Video */}
