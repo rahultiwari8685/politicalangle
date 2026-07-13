@@ -92,22 +92,31 @@ export default function ArticleCard1({ card, idx }: CardProps) {
             </div>
             <Link href={card.linkPost}>
               <h4
-                className="card-title mb-0"
+                className="card-title mb-2"
                 style={{
-                  whiteSpace: "normal",
-                  wordBreak: "break-word",
-                  width: "100%",
+                  display: "-webkit-box",
+                  WebkitLineClamp: 3,
+                  WebkitBoxOrient: "vertical",
+                  overflow: "hidden",
+                  textOverflow: "ellipsis",
+                  lineHeight: "1.25",
+                  minHeight: "2.75em", // 3 lines
+                  fontWeight: 700,
                 }}
               >
                 {card.title}
               </h4>
             </Link>
             <p
-              className="card-text text-600 fs-7 mb-0"
+              className="card-text text-600 mb-0"
               style={{
-                whiteSpace: "normal",
-                wordBreak: "break-word",
-                width: "100%",
+                display: "-webkit-box",
+                WebkitLineClamp: 2,
+                WebkitBoxOrient: "vertical",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
+                lineHeight: "1.5",
+                minHeight: "2em", // 2 lines
               }}
             >
               {card.description}
