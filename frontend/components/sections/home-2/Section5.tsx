@@ -35,7 +35,7 @@ export default function Section5() {
               badge: item.categories?.[0]?.name || "News",
               bgBadge: `bg-${(idx % 5) + 1}`,
               title: item.title || "No Title",
-              subtitle: item.subtitle || "No Description",
+              description: item.subtitle || "No Description",
               imgAuthor: "/assets/imgs/template/author/author-1.png",
               author: item.author?.name || "Admin",
               date: new Date(item.createdAt).toDateString(),

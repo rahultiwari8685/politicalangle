@@ -11,7 +11,7 @@ type CardProps = {
     badge: string;
     bgBadge: string;
     title: string;
-    subtitle: string;
+    description: string;
     imgAuthor: string;
     author: string;
     date: string;
@@ -82,9 +82,9 @@ export default function ArticleCard12({ card, idx }: CardProps) {
               {/* <h4 className="card-title mb-0 mt-3 text-truncate-2"> */}
               <h4 className="card-title mb-0 mt-3 ">{card.title}</h4>
             </Link>
-            {card.subtitle && (
+            {card.description && (
               <p className="card-text text-600 fs-7 mb-0 mt-3 text-truncate-3">
-                {card.subtitle}
+                {card.description}
               </p>
             )}
             <div className="bottom mt-auto d-flex flex-wrap align-items-center gap-2 pt-5">
