@@ -9,6 +9,7 @@ import Section5 from "@/components/sections/home-2/Section5";
 import Section6 from "@/components/sections/home-2/Section6";
 import Section7 from "@/components/sections/home-2/Section7";
 import Section8 from "@/components/sections/home-2/Section8";
+import Section10 from "@/components/sections/home/Section10";
 export default function Home_2() {
   return (
     <>
@@ -17,7 +18,7 @@ export default function Home_2() {
         <Section1 />
         <Section2 />
         <Section3 />
-        {/* <Section4 /> */}
+        <Section10 />
         <Section5 />
         {/* <Section6 blockForYou="d-block" blockTopTrending="d-none" />
         <Section7 />
