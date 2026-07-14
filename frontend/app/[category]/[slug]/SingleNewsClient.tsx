@@ -64,14 +64,14 @@ export default function Single_2({ slug, category }: Props) {
               readNum: "0",
             }));
 
-          setBlogs(formattedData);
+          setRelatedArticles(formattedData);
         } else {
-          setBlogs([]);
+          setRelatedArticles([]);
         }
       })
       .catch((err) => {
         console.error("API Error:", err);
-        setBlogs([]);
+        setRelatedArticles([]);
       })
       .finally(() => setLoading(false));
   }, []);
