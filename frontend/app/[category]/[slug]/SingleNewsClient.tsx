@@ -41,9 +41,9 @@ export default function Single_2({ slug, category }: Props) {
           const formattedData = textNews
             .slice(0, 8)
             .map((item: any, idx: number) => ({
-              linkPost: `/${item.categories?.[0]?.slug || item.categories?.[0]?._id}/${item.slug}`,
+              linkPost: `/${item.categories?.[0]?.slug || item.categories?.[0]?.name}/${item.slug}`,
               linkBadge: "#",
-              linkAuthor: `/page-author/${item.author?._id}`,
+              linkAuthor: `/page-author/${item.author?.name}`,
               linkComment: "#",
 
               img: item.thumbnail
