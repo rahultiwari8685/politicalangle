@@ -32,7 +32,7 @@ export default function SideBarServer() {
               ? `${setting.api}/uploads/images/${item.thumbnail}`
               : "/assets/imgs/other/img-other-4.png",
 
-            link: `/news?slug=${item.slug}`,
+          link: `/${item.categories?.[0]?.slug || "news"}/${item.slug}`,
 
             title: item.title || "No Title",
 
@@ -65,7 +65,7 @@ export default function SideBarServer() {
             <Image
               src="/assets/imgs/template/logo/Political_Logo.png"
               width={250}
-              height={130}
+              height={110}
               alt="logo"
             />
           </Link>
