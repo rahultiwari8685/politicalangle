@@ -88,7 +88,7 @@ export const createNews = async (req, res) => {
 
 export const getNews = async (req, res) => {
   try {
-    const { page = 1, limit = 10 } = req.query;
+    const { page = 1, limit = 30 } = req.query;
 
     const skip = (Number(page) - 1) * Number(limit);
 
