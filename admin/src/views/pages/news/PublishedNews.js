@@ -31,7 +31,7 @@ const PublishedNews = () => {
   const [userList, setUserList] = useState([])
   const [currentPage, setCurrentPage] = useState(1)
   const [loading, setLoading] = useState(false)
-  const itemsPerPage = 30
+  const itemsPerPage = 10
 
   const [fromDate, setFromDate] = useState('')
   const [toDate, setToDate] = useState('')
